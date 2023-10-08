@@ -31,7 +31,7 @@ const Register = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div>
+            <div className="mt-6">
                 <h2 className="text-3xl text-center mb-3">Please Register </h2>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto">
                     <form onSubmit={handleRegister} className="card-body">

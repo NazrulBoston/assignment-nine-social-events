@@ -6,7 +6,7 @@
         "description": "Celebrate the union of two souls with our exquisite wedding gift. This carefully chosen token of love is designed to add a touch of elegance to the newlyweds' journey together. Crafted with precision and love, it symbolizes the promise of forever and the start of a beautiful adventure. Let this gift be a reminder of the joyous day they said",
         "occasion": "Wedding",
         "details": "Details",
-        "price": 50.99
+        "price": 190.99
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "description": "Make birthdays extra special with our delightful birthday surprise. It's not just a gift; it's a memory in the making. Whether it's a milestone celebration or simply another year of life's journey, this gift will add a sprinkle of happiness to the day. Choose it to bring a smile to their face and make their birthday unforgettable.",
         "occasion": "Birthday",
         "details": "Details",
-        "price": 24.99
+        "price": 124.99
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "description": "Celebrate the love and years together with our anniversary celebration gift. It's a tribute to the journey of togetherness, filled with laughter, love, and cherished moments. This gift is a reflection of the beautiful bond you share, and it's a perfect way to say 'Happy Anniversary' with style and grace.",
         "occasion": "Anniversary",
         "details": "Details",
-        "price": 75.50
+        "price": 175.50
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "description": "A sweet gift for the mom-to-be! Our baby shower gift is designed to embrace the joy of impending motherhood. It's a thoughtful gesture to shower the expecting mom with love and support. Welcome the new arrival with a gift that represents the warmth and excitement of a growing family.",
         "occasion": "Baby Shower",
         "details": "Details",
-        "price": 29.99
+        "price": 129.99
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "description": "Congratulate the newly engaged couple with our engagement surprise gift. It's a token of your best wishes for their exciting journey towards marriage. This gift encapsulates the thrill of love and commitment, symbolizing the beginning of a beautiful chapter in their lives.",
         "occasion": "Engagement",
         "details": "Details",
-        "price": 42.95
+        "price": 142.95
     },
     {
         "id": 6,
@@ -51,6 +51,6 @@
         "description": "Wishing them a happy retirement! Our retirement farewell gift is a tribute to years of hard work and dedication. It's a heartfelt way to say goodbye to the working world and hello to a well-deserved phase of relaxation and adventure. Send your best wishes for a retirement filled with joy and new experiences.",
         "occasion": "Retirement",
         "details": "Details",
-        "price": 39.99
+        "price": 139.99
     }
 ]

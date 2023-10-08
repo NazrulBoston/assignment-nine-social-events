@@ -6,18 +6,24 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Services from "../../Services";
 import PrivateRoute from "./PrivateRoute";
+import EventDetails from "../Pages/EventDetails/EventDetails";
+import SpecialOffer from "../Pages/SpecialOffer/SpecialOffer";
 
 
 const router = createBrowserRouter([
    {
-    path: '/',
+    path: "/",
     element: <Root></Root>,
     errorElement:<ErrorPage></ErrorPage>,
     children:[
         {
             path:"/",
             element: <Home></Home>,
-            loader: () => fetch('data.json')
+            loader: () => fetch('/data.json')
+        },
+        {
+            path:"/event/:id",
+            element: <EventDetails></EventDetails>
         },
         {
             path:"/login",
@@ -29,7 +35,13 @@ const router = createBrowserRouter([
         }, 
         {
             path: "/services",
-            element: <PrivateRoute><Services></Services></PrivateRoute>
+            element: <PrivateRoute><Services></Services></PrivateRoute>,
+            children:[
+                {
+                    path:"/services/specialoffer",
+                    element: <SpecialOffer></SpecialOffer>
+                }
+            ]
         }
     ]
    }

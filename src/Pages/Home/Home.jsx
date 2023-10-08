@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Header from "../../Shared/Header/Header";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Event from "../Event/Event";
@@ -17,11 +17,15 @@ const Home = () => {
                     <div className="max-w-md absolute top-1/4">
                         <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                         <p className="mb-5m text-2xl mb-2">"Good fortune is what happens when opportunity meets with planning."</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to ="/register">
+                            <button className="btn btn-primary">Get Started</button>
+                        </Link>
+
+
                     </div>
                 </div>
             </div>
-            <h3 className="text-center text-4xl">Our services</h3>
+            <h3 className="text-center text-4xl mb-8">Our Services</h3>
             {/* events container */}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
