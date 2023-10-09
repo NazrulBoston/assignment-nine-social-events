@@ -8,16 +8,16 @@ const Gallery = () => {
             <div className="grid lg:grid-cols-4 gap-8" data-aos="fade-up"
                 data-aos-duration="3000" >
                 <div>
-                    <img src="/public/gallery/gallery1.jpg" alt="" />
+                    <img src="/gallery/gallery1.jpg" alt="" />
                 </div>
                 <div>
-                    <img src="/public/gallery/gallery2.jpg" alt="" />
+                    <img src="/gallery/gallery2.jpg" alt="" />
                 </div>
                 <div>
-                    <img src="/public/gallery/gallery3.jpg" alt="" />
+                    <img src="/gallery/gallery3.jpg" alt="" />
                 </div>
                 <div>
-                    <img className="h-40 w-80" src="/public/gallery/gallery4.jpg" alt="" />
+                    <img className="h-40 w-80" src="/gallery/gallery4.jpg" alt="" />
                 </div>
             </div>
            

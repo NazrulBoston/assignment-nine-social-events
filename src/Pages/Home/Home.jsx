@@ -15,7 +15,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Header></Header>
             <div>
-                <img className="w-full h-[500px] brightness-50 relative" src="/public/banner.jpg" alt="" />
+                <img className="w-full h-[500px] brightness-50 relative" src="/banner.jpg" alt="" />
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md absolute top-1/4 " data-aos="fade-up">
                         
