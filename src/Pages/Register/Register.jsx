@@ -2,11 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaGoogle } from 'react-icons/fa';
 import toast from "react-hot-toast";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, signInWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate();
 
 
@@ -45,6 +46,18 @@ const Register = () => {
 
 
     }
+    const handleSocial = (media) => {
+        media()
+            .then(result => {
+                console.log(result.user)
+                toast.success("Login Successfully")
+                navigate(location?.state ? location.state : "/")
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
 
     return (
         <div>
@@ -79,7 +92,11 @@ const Register = () => {
                         </div>
                     </form>
                     <p className="text-center mb-6">Have an account <Link to ="/login"><span className="border-2 rounded bg-slate-200 text-blue-600 px-1">login</span></Link></p>
+                    <button onClick={()=> handleSocial(signInWithGoogle)} className="btn btn-outline w-3/4 mx-auto mb-4"> <FaGoogle></FaGoogle>
+                   login with google
+                </button>
                 </div>
+                
             </div>
             
         </div>

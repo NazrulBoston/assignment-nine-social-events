@@ -3,10 +3,11 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
+import { FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('location in the location page',location)
@@ -42,6 +43,18 @@ const Login = () => {
     
     }
 
+    const handleSocial = (media) => {
+        media()
+            .then(result => {
+                console.log(result.user)
+                toast.success("Login Successfully")
+                navigate(location?.state ? location.state : "/")
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
     return (
         <div>
             <Navbar></Navbar>
@@ -69,6 +82,9 @@ const Login = () => {
                         </div>
                     </form>
                     <p className="text-center mb-6">Do not have an account <Link to ="/register"><span className="border-2 rounded bg-slate-200 text-blue-600 px-1">Register</span></Link></p>
+                    <button onClick={()=> handleSocial(signInWithGoogle)} className="btn btn-outline w-3/4 mx-auto mb-4"> <FaGoogle></FaGoogle>
+                   login with google
+                </button>
                 </div>
             </div>
             
