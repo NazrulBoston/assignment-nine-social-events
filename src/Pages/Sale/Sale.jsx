@@ -8,7 +8,7 @@ const Sale = () => {
     return (
         <div className="flex items-center text-white bg-gray-500 mb-6">
             <div className="flex-1">
-                <img src="/public/sale.jpg" alt="" />
+                <img src="/sale.jpg" alt="" />
             </div>
 
             <div className=" flex-row flex-1 text-center px-4 ">
