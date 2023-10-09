@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
@@ -17,9 +18,22 @@ const Login = () => {
         const email = form.get(('email'))
         const password = form.get(('password'))
         console.log(email, password)
+        if (password.length < 6) {
+            toast.error("Password is less than 6 characters")
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            toast.error('Password do not have a capital letter');
+            return
+        }  else if (!/[!@#$%^&*]/.test(password)) {
+            toast.error('Password do not have a special character');
+            return
+        }
+
+
         signIn(email, password)
         .then(result => {
             console.log(result.user)
+            toast.success("Login successfully!")
             navigate(location?.state ? location.state : "/");
         })
         .catch(error => {

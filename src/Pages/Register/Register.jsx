@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate();
+
 
 
     const handleRegister = e => {
@@ -16,11 +19,26 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(name, email, password);
+        if (password.length < 6) {
+            toast.error("Password is less than 6 characters")
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            toast.error('Password do not have a capital letter');
+            return
+        }  else if (!/[!@#$%^&*]/.test(password)) {
+            toast.error('Password do not have a special character');
+            return
+        }
+
+
 
         createUser(email, password)
         .then(result => {
             console.log(result.user)
+            toast.success("Register successfully!")
+            navigate("/")
         })
+
         .catch(error => {
             console.error(error)
         })

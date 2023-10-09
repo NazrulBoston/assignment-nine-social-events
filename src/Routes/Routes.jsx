@@ -8,6 +8,7 @@ import Services from "../../Services";
 import PrivateRoute from "./PrivateRoute";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import SpecialOffer from "../Pages/SpecialOffer/SpecialOffer";
+import Career from "../Pages/Carrer/Career";
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
         },
         {
             path:"/event/:id",
-            element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>
+            element:<PrivateRoute> <EventDetails></EventDetails></PrivateRoute>,
+            loader: () => fetch("/data.json")
         },
         {
             path:"/login",
@@ -35,13 +37,12 @@ const router = createBrowserRouter([
         }, 
         {
             path: "/services",
-            element: <PrivateRoute><Services></Services></PrivateRoute>,
-            children:[
-                {
-                    path:"/services/specialoffer",
-                    element: <SpecialOffer></SpecialOffer>
-                }
-            ]
+            element: <PrivateRoute><Services></Services></PrivateRoute>
+            
+        },
+        {
+            path:"/career",
+            element: <PrivateRoute><Career></Career></PrivateRoute>
         }
     ]
    }
