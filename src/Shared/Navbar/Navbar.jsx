@@ -6,11 +6,13 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
 
     const handleSignOut = () => {
-
+        logOut()
+        .then()
+        .catch()
     }
 
     const navLinks = <>
@@ -36,7 +38,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Social <span className="text-red-500">Events</span></a>
+                    <a className="btn btn-ghost normal-case text-2xl">Social <span className="text-red-500">Events</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

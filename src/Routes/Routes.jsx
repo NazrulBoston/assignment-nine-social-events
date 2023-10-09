@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         },
         {
             path:"/event/:id",
-            element: <EventDetails></EventDetails>
+            element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>
         },
         {
             path:"/login",

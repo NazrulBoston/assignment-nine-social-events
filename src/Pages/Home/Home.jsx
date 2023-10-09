@@ -2,6 +2,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import Header from "../../Shared/Header/Header";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Event from "../Event/Event";
+import Footer from "../../Shared/Footer/Footer";
+import Sale from "../Sale/Sale";
 
 
 const Home = () => {
@@ -28,11 +30,14 @@ const Home = () => {
             <h3 className="text-center text-4xl mb-8">Our Services</h3>
             {/* events container */}
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
                 {
                     events.map(event => <Event key={event.id} event={event}></Event>)
                 }
             </div>
+            <Sale></Sale>
+
+            <Footer></Footer>
         </div>
     );
 };
